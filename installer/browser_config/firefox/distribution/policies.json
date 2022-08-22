@@ -1,0 +1,8 @@
+{
+    "policies": {
+        "DisableAppUpdate": true,
+        "DontCheckDefaultBrowser": true,
+        "PasswordManagerEnabled": false,
+        "DisableSystemAddonUpdate": true
+    }
+}

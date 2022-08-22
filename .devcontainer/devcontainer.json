@@ -1,0 +1,72 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.202.3/containers/python-3
+{
+    "name": "Python 3",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "..",
+        "args": {
+            "BROWSER_NAME": "Firefox",
+            // "BROWSER_VERSION": "102.0"
+            // "BROWSER_NAME": "Chrome",
+            // "BROWSER_VERSION": "103.0.5060.134-1"
+            // "BROWSER_VERSION": "48.0.2564.109"
+            "BROWSER_VERSION": "60.0"
+        }
+    },
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Set *default* container specific settings.json values on container create.
+            "settings": {
+                "launch": {
+                    "configurations": [
+                        {
+                            "name": "Python: Current File",
+                            "type": "python",
+                            "request": "launch",
+                            "program": "${file}",
+                            "console": "integratedTerminal",
+                            "justMyCode": true
+                        }
+                    ]
+                },
+                "terminal.integrated.profiles.linux": {
+                    "bash": {
+                        "path": "/bin/bash"
+                    }
+                },
+                "python.defaultInterpreterPath": "/usr/local/bin/python3",
+                "python.languageServer": "Default",
+                "python.formatting.provider": "black",
+                "python.linting.flake8Enabled": true,
+                "python.linting.pydocstyleEnabled": true,
+                "python.linting.mypyEnabled": true,
+                "python.formatting.blackEnabled": true,
+                "editor.codeActionsOnSave": {
+                    "source.organizeImports": true
+                }
+            },
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "ms-python.python"
+            ]
+        }
+    },
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // "postCreateCommand": "pip install --user -r requirements/dev.txt ",
+    "postCreateCommand": "chmod u+x ./.devcontainer/postCreateCommand.sh && ./.devcontainer/postCreateCommand.sh",
+    // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+    "remoteUser": "appuser",
+    "remoteEnv": {
+        "PATH": "${containerEnv:PATH}:/home/appuser/.local/bin",
+        "DEBUG": "1",
+        "BROWSER_NAME": "Chrome",
+        "TESTWEB": "http://192.168.254.168/",
+        "GUACA_URL": "http://192.168.254.139:8080/guacamole/",
+        "GUACA_BROWSER": "ie9",
+        "VM_RESTAPI": "http://192.168.254.139:8000",
+        "SCREENSHOTS_FOLDER": ".debug"
+    }
+}

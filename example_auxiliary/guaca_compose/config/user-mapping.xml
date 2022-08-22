@@ -1,0 +1,104 @@
+<user-mapping>
+    <authorize username="ie8" password="test">
+        <connection name="ie8">
+            <protocol>rdp</protocol>
+            <param name="disable-copy">true</param>
+            <param name="disable-paste">true</param>
+            <param name="hostname">192.168.254.139</param>
+            <param name="port">5010</param>
+            <param name="username">IEUser</param>
+            <param name="password">Passw0rd!</param>
+            <param name="security">nla</param>
+            <param name="ignore-cert">true</param>
+            <param name="color-depth">24</param>
+            <param name="width">1440</param>
+            <param name="width">900</param>
+            <param name="dpi">96</param>
+        </connection>
+    </authorize>
+    <authorize username="ie9" password="test">
+        <connection name="ie9">
+            <protocol>rdp</protocol>
+            <param name="disable-copy">true</param>
+            <param name="disable-paste">true</param>
+            <param name="hostname">192.168.254.139</param>
+            <param name="port">5011</param>
+            <param name="username">IEUser</param>
+            <param name="password">Passw0rd!</param>
+            <param name="security">nla</param>
+            <param name="ignore-cert">true</param>
+            <param name="color-depth">24</param>
+            <param name="width">1440</param>
+            <param name="width">900</param>
+            <param name="dpi">96</param>
+        </connection>
+    </authorize>
+    <authorize username="ie10" password="test">
+        <connection name="ie10">
+            <protocol>rdp</protocol>
+            <param name="disable-copy">true</param>
+            <param name="disable-paste">true</param>
+            <param name="hostname">192.168.254.139</param>
+            <param name="port">5012</param>
+            <param name="username">IEUser</param>
+            <param name="password">Passw0rd!</param>
+            <param name="security">nla</param>
+            <param name="ignore-cert">true</param>
+            <param name="color-depth">24</param>
+            <param name="width">1440</param>
+            <param name="width">900</param>
+            <param name="dpi">96</param>
+        </connection>
+    </authorize>
+    <authorize username="ie11" password="test">
+        <connection name="ie11">
+            <protocol>rdp</protocol>
+            <param name="disable-copy">true</param>
+            <param name="disable-paste">true</param>
+            <param name="hostname">192.168.254.139</param>
+            <param name="port">5013</param>
+            <param name="username">IEUser</param>
+            <param name="password">Passw0rd!</param>
+            <param name="security">nla</param>
+            <param name="ignore-cert">true</param>
+            <param name="color-depth">24</param>
+            <param name="width">1440</param>
+            <param name="width">900</param>
+            <param name="dpi">96</param>
+        </connection>
+    </authorize>
+    <authorize username="edge" password="test">
+        <connection name="edge">
+            <protocol>rdp</protocol>
+            <param name="disable-copy">true</param>
+            <param name="disable-paste">true</param>
+            <param name="hostname">192.168.254.139</param>
+            <param name="port">5014</param>
+            <param name="username">IEUser</param>
+            <param name="password">Passw0rd!</param>
+            <param name="security">nla</param>
+            <param name="ignore-cert">true</param>
+            <param name="color-depth">24</param>
+            <param name="width">1440</param>
+            <param name="width">900</param>
+            <param name="dpi">96</param>
+        </connection>
+    </authorize>
+    <authorize username="ie11win8" password="test">
+        <connection name="ie11win8">
+            <protocol>rdp</protocol>
+            <param name="disable-copy">true</param>
+            <param name="disable-paste">true</param>
+            <param name="hostname">192.168.254.147</param>
+            <param name="port">3389</param>
+            <param name="username">IEUser</param>
+            <param name="password">Passw0rd!</param>
+            <param name="security">nla</param>
+            <param name="ignore-cert">true</param>
+            <param name="color-depth">24</param>
+            <param name="width">1440</param>
+            <param name="width">900</param>
+            <param name="dpi">96</param>
+        </connection>
+    </authorize>
+</user-mapping>

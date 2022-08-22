@@ -1,0 +1,27 @@
+**/.dockerignore
+**/.git
+**/.gitignore
+**/Dockerfile*
+README.md
+**/docs
+
+# ide related
+**/.vscode
+**/.editorconfig
+**/pre-commit-config.yaml
+
+# Generated
+__pycache__
+.mypy_cache
+*egg-info
+build
+*.DS_Store
+
+# Generated debug
+**/.debug
+
+# Others
+example_auxiliary
+
+# Test env
+.env

@@ -1,0 +1,6 @@
+pyautogui
+pytesseract
+pillow
+pyvirtualdisplay
+opencv-python
+easyprocess

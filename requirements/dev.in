@@ -1,0 +1,7 @@
+-r prod.in
+flake8
+mypy
+black
+pydocstyle
+pip-compile-multi
+pre-commit

@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+
+  guacamole:
+    image: guacamole/guacamole
+    ports:
+      - 8080:8080
+    environment:
+      - GUACD_HOSTNAME=guacd
+      - GUACAMOLE_HOME=/config
+    volumes:
+      - ./config/guacamole.properties:/config/guacamole.properties
+      - ./config/user-mapping.xml:/config/user-mapping.xml
+  guacd:
+    image: guacamole/guacd
