@@ -1,10 +1,48 @@
-
+- [Introduction](#introduction)
+- [主要目的](#主要目的)
+- [目录结构](#目录结构)
+- [注意事项](#注意事项)
+- [被测浏览器支持情况](#被测浏览器支持情况)
+- [Build时候传入版本号速查](#build时候传入版本号速查)
+  - [Chrome 88+](#chrome-88)
+  - [Chome 88-](#chome-88-)
+  - [Firefox](#firefox)
+- [基本用法](#基本用法)
+  - [前提条件](#前提条件)
+  - [浏览器 standalone bot](#浏览器-standalone-bot)
+    - [原理与适用场景](#原理与适用场景)
+    - [使用方法与步骤](#使用方法与步骤)
+  - [用浏览器连接Guacamole+Guacamole环境](#用浏览器连接guacamoleguacamole环境)
+    - [为什么使用Guacamole](#为什么使用guacamole)
+    - [原理与适用场景](#原理与适用场景-1)
+    - [已测试的浏览器支持情况](#已测试的浏览器支持情况)
+      - [注意事项](#注意事项-1)
+    - [使用方法与步骤](#使用方法与步骤-1)
+- [环境变量与作用](#环境变量与作用)
+  - [通用环境变量](#通用环境变量)
+  - [通过Guacamole远程执行时的环境变量](#通过guacamole远程执行时的环境变量)
+- [开发环境搭建](#开发环境搭建)
+- [调试与排错](#调试与排错)
+- [参考资料](#参考资料)
+  - [浏览器版本速查](#浏览器版本速查)
 # Introduction
 基于pytesseract做文字识别，用opencv做图像识别，配合pyautogui操纵鼠标与键盘，可以用来做纯GUI bot.
 pyautogui与xvfb结合，可以用来做浏览器与桌面应用测试，绕过Bot安全应用产品对浏览器运行环境的检查。
 
 # 主要目的
 不是做浏览器兼容性测试。而是绕过安全产品对运行环境以及鼠标轨迹的检查。
+
+# 目录结构
+.
+├── Dockerfile
+├── README.md
+├── bot_click -- 核心lib
+├── example_auxiliary -- 运行examples中示例所需的artifacts
+├── examples -- 使用核心lib的样例
+├── installer -- build docker时，安装与配置浏览器所需的脚本与文件
+├── requirements
+├── setup.cfg
+└── setup.py
 
 # 注意事项
 图像匹配的时候，是用的matchTemplate并以TM_CCOEFF_NORMED进行匹配。适用于rotation, scale, and viewing angle恒定的情况.示例中，仅通过guacamole去launch ie/edge浏览器以及关闭浏览器的时候使用到图像匹配。示例中，是通过guacamole usermapping.xml的dispaly settings来强制width/height/rdp，以达到恒定。
