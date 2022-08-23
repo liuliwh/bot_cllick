@@ -33,16 +33,17 @@ pyautogui与xvfb结合，可以用来做浏览器与桌面应用测试，绕过B
 不是做浏览器兼容性测试。而是绕过安全产品对运行环境以及鼠标轨迹的检查。
 
 # 目录结构
-.
-├── Dockerfile
-├── README.md
-├── bot_click -- 核心lib
+
+├── bot_click 核心lib
+
 ├── example_auxiliary -- 运行examples中示例所需的artifacts
-├── examples -- 使用核心lib的样例
+
+├── examples  -- 使用核心lib的样例
+
 ├── installer -- build docker时，安装与配置浏览器所需的脚本与文件
-├── requirements
-├── setup.cfg
-└── setup.py
+
+├── .devcontainer -- dev 开发所使用的docker以及相关配置，包括IDE配置
+
 
 # 注意事项
 图像匹配的时候，是用的matchTemplate并以TM_CCOEFF_NORMED进行匹配。适用于rotation, scale, and viewing angle恒定的情况.示例中，仅通过guacamole去launch ie/edge浏览器以及关闭浏览器的时候使用到图像匹配。示例中，是通过guacamole usermapping.xml的dispaly settings来强制width/height/rdp，以达到恒定。
